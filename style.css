@@ -14,9 +14,6 @@ html,body{
 .checks p{
     width: 30%;
 }
-.drums{
-    width: min(100%, 3rem);
-}
 .centered{
     display: flex;
     justify-content: center;

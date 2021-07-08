@@ -13,7 +13,7 @@ function setupButtonAmt(val) {
     for (let x = 0; x < val; x++) {
         dons.innerHTML += `<div class="drum">
                                 <input type="checkbox" name="drum${x}" class="chekbok">
-                                <label for="drum${x}" onclick="set(${x})" id="drum${x}"><img src="greys.svg" class="drums"></label>
+                                <label for="drum${x}" onclick="set(${x})" id="drum${x}"><img src="grey.svg" class="drums" style="width: calc(100vw / ${Math.max(val, 16)})"></label>
                             </div>`;
     }
 }
@@ -44,30 +44,30 @@ function changeimage(id) {
     if (sizes[id] == 1) {
         switch (drums[id]) {
             case 1:
-                document.getElementById(`drum${id}`).children[0].setAttribute("src","don.svg")
+                document.getElementById(`drum${id}`).children[0].setAttribute("src","Big Don.svg")
                 break;
             
             case 2:
-                document.getElementById(`drum${id}`).children[0].setAttribute("src","ka.svg")
+                document.getElementById(`drum${id}`).children[0].setAttribute("src","Big Ka.svg")
                 break;
         
             default:
-                document.getElementById(`drum${id}`).children[0].setAttribute("src","grey.svg")
+                document.getElementById(`drum${id}`).children[0].setAttribute("src","Big Grey.svg")
             
         }
         return 0;
     }
     switch (drums[id]) {
         case 1:
-            document.getElementById(`drum${id}`).children[0].setAttribute("src","dons.svg")
+            document.getElementById(`drum${id}`).children[0].setAttribute("src","don.svg")
             break;
         
         case 2:
-            document.getElementById(`drum${id}`).children[0].setAttribute("src","kas.svg")
+            document.getElementById(`drum${id}`).children[0].setAttribute("src","ka.svg")
             break;
     
         default:
-            document.getElementById(`drum${id}`).children[0].setAttribute("src","greys.svg")
+            document.getElementById(`drum${id}`).children[0].setAttribute("src","grey.svg")
         
     }
 }

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taiko Charter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="notes">
+        <div class="centered">
+            <div class="option">
+                <input oninput="subUpd(this.value)" type="range" name="Subdivision" id="subdivision" min=6 max=32 value="16">
+                <label for="Subdivision" id="subLabel"></label>
+                <button id="upd" onclick="setupButtonAmt(document.getElementById('subdivision').value)">Update size</button>
+            </div>
+        </div>
+        <hr>
+        <div id="drums" class="checks"></div>
+        <span id="typeshow">TOOL: Drums</span>
+        <button onclick="changetype(0)">Drums</button>
+        <button onclick="changetype(1)">Sizes</button>
+        <br>
+        <button onclick="upOut()">Update & Add</button>
+        <button onclick="deleteSelected()">Delete out</button>
+        <button onclick="change()">change it</button>
+        <button onclick="clr()">clear</button>
+        <span id="output"></span>
+        <div id="outputList">
+
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
